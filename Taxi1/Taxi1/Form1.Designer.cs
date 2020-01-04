@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -42,16 +43,18 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.таксопаркDataSet = new Taxi1.ТаксопаркDataSet();
             this.пользователиTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ПользователиTableAdapter();
+            this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(96, 158);
+            this.button1.Location = new System.Drawing.Point(92, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 23);
             this.button1.TabIndex = 0;
@@ -61,7 +64,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(258, 158);
+            this.button2.Location = new System.Drawing.Point(258, 176);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 23);
             this.button2.TabIndex = 1;
@@ -71,14 +74,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 78);
+            this.textBox1.Location = new System.Drawing.Point(96, 92);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(322, 20);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 116);
+            this.textBox2.Location = new System.Drawing.Point(96, 139);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(322, 20);
@@ -88,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Forte", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 15);
+            this.label1.Location = new System.Drawing.Point(66, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 30);
             this.label1.TabIndex = 7;
@@ -97,7 +100,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(219, 205);
+            this.button3.Location = new System.Drawing.Point(219, 220);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(199, 23);
             this.button3.TabIndex = 8;
@@ -108,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 210);
+            this.label2.Location = new System.Drawing.Point(89, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 13);
             this.label2.TabIndex = 9;
@@ -117,7 +120,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Taxi1.Properties.Resources.iconfinder_car_taxi_front_01_1988882;
-            this.pictureBox3.Location = new System.Drawing.Point(37, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -127,7 +130,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Taxi1.Properties.Resources.iconfinder_lock_115716;
-            this.pictureBox2.Location = new System.Drawing.Point(53, 104);
+            this.pictureBox2.Location = new System.Drawing.Point(53, 127);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -137,7 +140,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Taxi1.Properties.Resources.iconfinder_00_ELASTOFONT_STORE_READY_user_circle_2703062;
-            this.pictureBox1.Location = new System.Drawing.Point(53, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(53, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -158,11 +161,17 @@
             // 
             this.пользователиTableAdapter.ClearBeforeFill = true;
             // 
+            // visualStyler1
+            // 
+            this.visualStyler1.HostForm = this;
+            this.visualStyler1.License = ((SkinSoft.VisualStyler.Licensing.VisualStylerLicense)(resources.GetObject("visualStyler1.License")));
+            this.visualStyler1.LoadVisualStyle(null, "Office2007 (Black).vssf");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 249);
+            this.ClientSize = new System.Drawing.Size(450, 262);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
@@ -184,6 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +214,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         public ТаксопаркDataSetTableAdapters.ПользователиTableAdapter пользователиTableAdapter;
+        private SkinSoft.VisualStyler.VisualStyler visualStyler1;
     }
 }
 
