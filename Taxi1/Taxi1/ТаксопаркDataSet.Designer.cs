@@ -4767,6 +4767,11 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                 }
             }
         }
+
+        internal void EndEdit()
+        {
+            
+        }
     }
     
     /// <summary>

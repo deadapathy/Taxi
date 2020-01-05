@@ -75,6 +75,7 @@
             this.водителиToolStripMenuItem.Name = "водителиToolStripMenuItem";
             this.водителиToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.водителиToolStripMenuItem.Text = "Водители";
+            this.водителиToolStripMenuItem.Click += new System.EventHandler(this.водителиToolStripMenuItem_Click);
             // 
             // диспетчерыToolStripMenuItem
             // 

@@ -22,5 +22,11 @@ namespace Taxi1
             Clients f = new Clients();
             f.Show();
         }
+
+        private void водителиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Drivers f = new Drivers();
+            f.Show();
+        }
     }
 }
