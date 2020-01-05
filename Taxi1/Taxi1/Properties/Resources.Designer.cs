@@ -63,6 +63,16 @@ namespace Taxi1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _512px {
+            get {
+                object obj = ResourceManager.GetObject("512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_00_ELASTOFONT_STORE_READY_user_circle_2703062 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_00-ELASTOFONT-STORE-READY_user-circle_2703062", resourceCulture);

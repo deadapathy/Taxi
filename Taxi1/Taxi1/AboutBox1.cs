@@ -14,12 +14,10 @@ namespace Taxi1
         public AboutBox1()
         {
             InitializeComponent();
-            this.Text = String.Format("О программе {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Версия {0}", AssemblyVersion);
+           
+           
             this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            
         }
 
         #region Методы доступа к атрибутам сборки
@@ -101,5 +99,20 @@ namespace Taxi1
             }
         }
         #endregion
+
+        private void labelProductName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCompanyName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

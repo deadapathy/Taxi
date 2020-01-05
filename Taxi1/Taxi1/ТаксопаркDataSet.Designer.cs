@@ -5617,6 +5617,11 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                 }
             }
         }
+
+        internal void EndEdit()
+        {
+         
+        }
     }
     
     /// <summary>
@@ -7476,6 +7481,11 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+
+        internal void EndEdit()
+        {
+       
         }
     }
     

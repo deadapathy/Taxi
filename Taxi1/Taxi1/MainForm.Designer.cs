@@ -82,18 +82,21 @@
             this.диспетчерыToolStripMenuItem.Name = "диспетчерыToolStripMenuItem";
             this.диспетчерыToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.диспетчерыToolStripMenuItem.Text = "Диспетчеры";
+            this.диспетчерыToolStripMenuItem.Click += new System.EventHandler(this.диспетчерыToolStripMenuItem_Click);
             // 
             // тарифыToolStripMenuItem
             // 
             this.тарифыToolStripMenuItem.Name = "тарифыToolStripMenuItem";
             this.тарифыToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.тарифыToolStripMenuItem.Text = "Тарифы";
+            this.тарифыToolStripMenuItem.Click += new System.EventHandler(this.тарифыToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 

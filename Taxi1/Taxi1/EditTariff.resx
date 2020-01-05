@@ -117,15 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBoxDescription.Text" xml:space="preserve">
-    <value>Автоматизация работы диспетчеров таксопарка.
-
-Имеется автопарк, в котором одна машина привязана к одному водителю.
-
-В таксопарк звонят клиенты, диспетчеры регестрируют нового клиента и новую заявку, затем отправляется машина.
-
-Для каждой таблицы кроме Тарифов, есть возможность составить отчет.
-
-</value>
-  </data>
 </root>

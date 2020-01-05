@@ -127,22 +127,25 @@
   <data name="iconfinder_Plus_206460" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\iconfinder_Plus_206460.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_car-taxi-front-01_1988882" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\iconfinder_car-taxi-front-01_1988882.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_floppy_285657" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\iconfinder_floppy_285657.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_system-search_118797" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\iconfinder_system-search_118797.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_lock_115716" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\iconfinder_lock_115716.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_f-cross_256_282471" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\iconfinder_f-cross_256_282471.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_excel_272697" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\iconfinder_excel_272697.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_f-cross_256_282471" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\iconfinder_f-cross_256_282471.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_lock_115716" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\iconfinder_lock_115716.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_car-taxi-front-01_1988882" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\iconfinder_car-taxi-front-01_1988882.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

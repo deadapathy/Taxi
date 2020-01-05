@@ -40,22 +40,6 @@
             this.kToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.статусВодителяDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.водителиBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.таксопаркDataSet1 = new Taxi1.ТаксопаркDataSet();
-            this.автоBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номерАвтоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.маркаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.цветDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодВодителяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.водителиTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ВодителиTableAdapter();
-            this.автоTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.АвтоTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,14 +48,30 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.статусВодителяDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.водителиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.таксопаркDataSet1 = new Taxi1.ТаксопаркDataSet();
+            this.кодDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерАвтоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.маркаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.цветDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодВодителяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.автоBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.водителиTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ВодителиTableAdapter();
+            this.автоTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.АвтоTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.водителиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.автоBindingSource)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -198,96 +198,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(653, 186);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            // 
-            // фамилияDataGridViewTextBoxColumn
-            // 
-            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
-            // 
-            // имяDataGridViewTextBoxColumn
-            // 
-            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
-            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
-            // 
-            // отчествоDataGridViewTextBoxColumn
-            // 
-            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
-            // 
-            // телефонDataGridViewTextBoxColumn
-            // 
-            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
-            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
-            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
-            // 
-            // статусВодителяDataGridViewCheckBoxColumn
-            // 
-            this.статусВодителяDataGridViewCheckBoxColumn.DataPropertyName = "Статус водителя";
-            this.статусВодителяDataGridViewCheckBoxColumn.HeaderText = "Статус водителя";
-            this.статусВодителяDataGridViewCheckBoxColumn.Name = "статусВодителяDataGridViewCheckBoxColumn";
-            // 
-            // водителиBindingSource
-            // 
-            this.водителиBindingSource.DataMember = "Водители";
-            this.водителиBindingSource.DataSource = this.таксопаркDataSet1;
-            // 
-            // таксопаркDataSet1
-            // 
-            this.таксопаркDataSet1.DataSetName = "ТаксопаркDataSet";
-            this.таксопаркDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // автоBindingSource
-            // 
-            this.автоBindingSource.DataMember = "Авто";
-            this.автоBindingSource.DataSource = this.таксопаркDataSet1;
-            // 
-            // кодDataGridViewTextBoxColumn1
-            // 
-            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn1.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
-            this.кодDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // номерАвтоDataGridViewTextBoxColumn
-            // 
-            this.номерАвтоDataGridViewTextBoxColumn.DataPropertyName = "Номер авто";
-            this.номерАвтоDataGridViewTextBoxColumn.HeaderText = "Номер авто";
-            this.номерАвтоDataGridViewTextBoxColumn.Name = "номерАвтоDataGridViewTextBoxColumn";
-            // 
-            // маркаDataGridViewTextBoxColumn
-            // 
-            this.маркаDataGridViewTextBoxColumn.DataPropertyName = "Марка";
-            this.маркаDataGridViewTextBoxColumn.HeaderText = "Марка";
-            this.маркаDataGridViewTextBoxColumn.Name = "маркаDataGridViewTextBoxColumn";
-            // 
-            // цветDataGridViewTextBoxColumn
-            // 
-            this.цветDataGridViewTextBoxColumn.DataPropertyName = "Цвет";
-            this.цветDataGridViewTextBoxColumn.HeaderText = "Цвет";
-            this.цветDataGridViewTextBoxColumn.Name = "цветDataGridViewTextBoxColumn";
-            // 
-            // кодВодителяDataGridViewTextBoxColumn
-            // 
-            this.кодВодителяDataGridViewTextBoxColumn.DataPropertyName = "Код водителя";
-            this.кодВодителяDataGridViewTextBoxColumn.HeaderText = "Код водителя";
-            this.кодВодителяDataGridViewTextBoxColumn.Name = "кодВодителяDataGridViewTextBoxColumn";
-            // 
-            // водителиTableAdapter
-            // 
-            this.водителиTableAdapter.ClearBeforeFill = true;
-            // 
-            // автоTableAdapter
-            // 
-            this.автоTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // button2
             // 
@@ -371,6 +284,96 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            // 
+            // фамилияDataGridViewTextBoxColumn
+            // 
+            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            // 
+            // имяDataGridViewTextBoxColumn
+            // 
+            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
+            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            // 
+            // отчествоDataGridViewTextBoxColumn
+            // 
+            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
+            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
+            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
+            // 
+            // телефонDataGridViewTextBoxColumn
+            // 
+            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
+            // 
+            // статусВодителяDataGridViewCheckBoxColumn
+            // 
+            this.статусВодителяDataGridViewCheckBoxColumn.DataPropertyName = "Статус водителя";
+            this.статусВодителяDataGridViewCheckBoxColumn.HeaderText = "Статус водителя";
+            this.статусВодителяDataGridViewCheckBoxColumn.Name = "статусВодителяDataGridViewCheckBoxColumn";
+            // 
+            // водителиBindingSource
+            // 
+            this.водителиBindingSource.DataMember = "Водители";
+            this.водителиBindingSource.DataSource = this.таксопаркDataSet1;
+            // 
+            // таксопаркDataSet1
+            // 
+            this.таксопаркDataSet1.DataSetName = "ТаксопаркDataSet";
+            this.таксопаркDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // кодDataGridViewTextBoxColumn1
+            // 
+            this.кодDataGridViewTextBoxColumn1.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn1.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn1.Name = "кодDataGridViewTextBoxColumn1";
+            this.кодDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // номерАвтоDataGridViewTextBoxColumn
+            // 
+            this.номерАвтоDataGridViewTextBoxColumn.DataPropertyName = "Номер авто";
+            this.номерАвтоDataGridViewTextBoxColumn.HeaderText = "Номер авто";
+            this.номерАвтоDataGridViewTextBoxColumn.Name = "номерАвтоDataGridViewTextBoxColumn";
+            // 
+            // маркаDataGridViewTextBoxColumn
+            // 
+            this.маркаDataGridViewTextBoxColumn.DataPropertyName = "Марка";
+            this.маркаDataGridViewTextBoxColumn.HeaderText = "Марка";
+            this.маркаDataGridViewTextBoxColumn.Name = "маркаDataGridViewTextBoxColumn";
+            // 
+            // цветDataGridViewTextBoxColumn
+            // 
+            this.цветDataGridViewTextBoxColumn.DataPropertyName = "Цвет";
+            this.цветDataGridViewTextBoxColumn.HeaderText = "Цвет";
+            this.цветDataGridViewTextBoxColumn.Name = "цветDataGridViewTextBoxColumn";
+            // 
+            // кодВодителяDataGridViewTextBoxColumn
+            // 
+            this.кодВодителяDataGridViewTextBoxColumn.DataPropertyName = "Код водителя";
+            this.кодВодителяDataGridViewTextBoxColumn.HeaderText = "Код водителя";
+            this.кодВодителяDataGridViewTextBoxColumn.Name = "кодВодителяDataGridViewTextBoxColumn";
+            // 
+            // автоBindingSource
+            // 
+            this.автоBindingSource.DataMember = "Авто";
+            this.автоBindingSource.DataSource = this.таксопаркDataSet1;
+            // 
+            // водителиTableAdapter
+            // 
+            this.водителиTableAdapter.ClearBeforeFill = true;
+            // 
+            // автоTableAdapter
+            // 
+            this.автоTableAdapter.ClearBeforeFill = true;
+            // 
             // Drivers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,11 +391,11 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.водителиBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.автоBindingSource)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

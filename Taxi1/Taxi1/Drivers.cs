@@ -27,27 +27,34 @@ namespace Taxi1
             AddNewDriver f = new AddNewDriver();
             if (f.ShowDialog() == DialogResult.OK)
             {
-                string Sname, Name, Lname, Telephone;
-                bool Status;
-                string NumAuto, Marka, Color;
-                int idDrive;
+                try
+                {
+                    string Sname, Name, Lname, Telephone;
+                    bool Status;
+                    string NumAuto, Marka, Color;
+                    int idDrive;
 
-                Sname = f.textBox1.Text;
-                Name = f.textBox2.Text;
-                Lname = f.textBox3.Text;
-                Telephone = f.textBox4.Text;
-                Status = f.checkBox1.Checked;
+                    Sname = f.textBox1.Text;
+                    Name = f.textBox2.Text;
+                    Lname = f.textBox3.Text;
+                    Telephone = f.textBox4.Text;
+                    Status = f.checkBox1.Checked;
 
-                NumAuto = f.textBox5.Text;
-                Marka = f.textBox6.Text;
-                Color = f.textBox7.Text;
-                idDrive = Convert.ToInt32(f.textBox8.Text);
+                    NumAuto = f.textBox5.Text;
+                    Marka = f.textBox6.Text;
+                    Color = f.textBox7.Text;
+                    idDrive = Convert.ToInt32(f.textBox8.Text);
 
-                this.водителиTableAdapter.Insert(Sname, Name, Lname, Telephone, Status);
-                this.водителиTableAdapter.Fill(таксопаркDataSet1.Водители);
+                    this.водителиTableAdapter.Insert(Sname, Name, Lname, Telephone, Status);
+                    this.водителиTableAdapter.Fill(таксопаркDataSet1.Водители);
 
-                this.автоTableAdapter.Insert(NumAuto, Marka, Color, idDrive);
-                this.автоTableAdapter.Fill(таксопаркDataSet1.Авто);
+                    this.автоTableAdapter.Insert(NumAuto, Marka, Color, idDrive);
+                    this.автоTableAdapter.Fill(таксопаркDataSet1.Авто);
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Произошла ошибка");
+                }
             }
         }
 
@@ -108,26 +115,33 @@ namespace Taxi1
 
             if(f.ShowDialog() == DialogResult.OK)
             {
-                string sSname, sName, sLname, sTelephone, sNumAuto, sMarka, sColor;
-                bool sStatus;
-                int sidDriver;
+                try
+                {
+                    string sSname, sName, sLname, sTelephone, sNumAuto, sMarka, sColor;
+                    bool sStatus;
+                    int sidDriver;
 
-                sSname = f.textBox1.Text;
-                sName = f.textBox2.Text;
-                sLname = f.textBox3.Text;
-                sTelephone = f.textBox4.Text;
+                    sSname = f.textBox1.Text;
+                    sName = f.textBox2.Text;
+                    sLname = f.textBox3.Text;
+                    sTelephone = f.textBox4.Text;
 
-                sNumAuto = f.textBox5.Text;
-                sMarka = f.textBox6.Text;
-                sColor = f.textBox7.Text;
-                sidDriver = Convert.ToInt32(f.textBox8.Text);
-                sStatus = f.checkBox1.Checked;
+                    sNumAuto = f.textBox5.Text;
+                    sMarka = f.textBox6.Text;
+                    sColor = f.textBox7.Text;
+                    sidDriver = Convert.ToInt32(f.textBox8.Text);
+                    sStatus = f.checkBox1.Checked;
 
-                this.водителиTableAdapter.Update(sSname, sName, sLname, sTelephone, sStatus, Id, Sname, Name, Lname, Telephone, Status);
-                this.водителиTableAdapter.Fill(таксопаркDataSet1.Водители);
+                    this.водителиTableAdapter.Update(sSname, sName, sLname, sTelephone, sStatus, Id, Sname, Name, Lname, Telephone, Status);
+                    this.водителиTableAdapter.Fill(таксопаркDataSet1.Водители);
 
-                this.автоTableAdapter.Update(sNumAuto, sMarka, sColor, sidDriver, idAuto, NumAuto, Marka, Color, idDriver);
-                this.автоTableAdapter.Fill(таксопаркDataSet1.Авто);
+                    this.автоTableAdapter.Update(sNumAuto, sMarka, sColor, sidDriver, idAuto, NumAuto, Marka, Color, idDriver);
+                    this.автоTableAdapter.Fill(таксопаркDataSet1.Авто);
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Произошла ошибка");
+                }
             }
 
         }
@@ -138,29 +152,39 @@ namespace Taxi1
             int id, idAuto, idDriver, index, index1;
             bool Status;
 
-            index = dataGridView1.CurrentRow.Index;
-            index1 = dataGridView2.CurrentRow.Index;
-
-            id = (int)dataGridView1.Rows[index].Cells[0].Value;
-            Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
-            Name = (string)dataGridView1.Rows[index].Cells[2].Value;
-            Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
-            Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
-            Status = (bool)dataGridView1.Rows[index].Cells[5].Value;
-
-            idAuto = (int)dataGridView2.Rows[index1].Cells[0].Value;
-            NumAuto = (string)dataGridView2.Rows[index1].Cells[1].Value;
-            Marka = (string)dataGridView2.Rows[index1].Cells[2].Value;
-            Color = (string)dataGridView2.Rows[index1].Cells[3].Value;
-            idDriver = (int)dataGridView2.Rows[index1].Cells[4].Value;
-
-            if(MessageBox.Show("Вы действительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                this.водителиTableAdapter.Delete(id, Sname, Name, Lname, Telephone, Status);
-                this.водителиTableAdapter.Fill(таксопаркDataSet1.Водители);
+                if (dataGridView2.RowCount <= 1) return;
+                index = dataGridView1.CurrentRow.Index;
+                index1 = dataGridView2.CurrentRow.Index;
+                if (index1 == dataGridView2.RowCount - 1) return;
 
-                this.автоTableAdapter.Delete(idAuto, NumAuto, Marka, Color, idDriver);
-                this.автоTableAdapter.Fill(таксопаркDataSet1.Авто);
+
+                id = (int)dataGridView1.Rows[index].Cells[0].Value;
+                Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
+                Name = (string)dataGridView1.Rows[index].Cells[2].Value;
+                Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
+                Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
+                Status = (bool)dataGridView1.Rows[index].Cells[5].Value;
+
+                idAuto = (int)dataGridView2.Rows[index1].Cells[0].Value;
+                NumAuto = (string)dataGridView2.Rows[index1].Cells[1].Value;
+                Marka = (string)dataGridView2.Rows[index1].Cells[2].Value;
+                Color = (string)dataGridView2.Rows[index1].Cells[3].Value;
+                idDriver = (int)dataGridView2.Rows[index1].Cells[4].Value;
+
+                if (MessageBox.Show("Вы действительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.водителиTableAdapter.Delete(id, Sname, Name, Lname, Telephone, Status);
+                    this.водителиTableAdapter.Fill(таксопаркDataSet1.Водители);
+
+                    this.автоTableAdapter.Delete(idAuto, NumAuto, Marka, Color, idDriver);
+                    this.автоTableAdapter.Fill(таксопаркDataSet1.Авто);
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Произошла ошибка");
             }
 
         }
@@ -189,19 +213,25 @@ namespace Taxi1
 
         private void textBox3_KeyDown(object sender, KeyEventArgs e)
         {
-            if (comboBox1.Text == "Номер авто")
+            try
             {
-                автоBindingSource.Filter = "[Номер авто] LIKE '" + textBox3.Text + "%'";
+                if (comboBox1.Text == "Номер авто")
+                {
+                    автоBindingSource.Filter = "[Номер авто] LIKE '" + textBox3.Text + "%'";
+                }
+                else if (comboBox1.Text == "Марка")
+                {
+                    автоBindingSource.Filter = "Марка LIKE '" + textBox3.Text + "%'";
+                }
+                else if (comboBox1.Text == "Цвет")
+                {
+                    автоBindingSource.Filter = "Цвет LIKE '" + textBox3.Text + "%'";
+                }
             }
-            else if (comboBox1.Text == "Марка")
+            catch (Exception)
             {
-                автоBindingSource.Filter = "Марка LIKE '" + textBox3.Text + "%'";
+                MessageBox.Show("Произошла ошибка");
             }
-            else if (comboBox1.Text == "Цвет")
-            {
-                автоBindingSource.Filter = "Цвет LIKE '" + textBox3.Text + "%'";
-            }
-            
          
 
                 
@@ -284,18 +314,52 @@ namespace Taxi1
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            if (comboBox2.Text == "Фамилия")
+            try
             {
-                водителиBindingSource.Filter = "Фамилия LIKE '" + textBox1.Text + "%'";
+                if (comboBox2.Text == "Фамилия")
+                {
+                    водителиBindingSource.Filter = "Фамилия LIKE '" + textBox1.Text + "%'";
+                }
+                else if (comboBox2.Text == "Имя")
+                {
+                    водителиBindingSource.Filter = "Имя LIKE '" + textBox1.Text + "%'";
+                }
+                else if (comboBox2.Text == "Телефон")
+                {
+                    водителиBindingSource.Filter = "Телефон LIKE '" + textBox1.Text + "%'";
+                }
             }
-            else if (comboBox2.Text == "Имя") 
+            catch (Exception)
             {
-                водителиBindingSource.Filter = "Имя LIKE '" + textBox1.Text + "%'";
+                MessageBox.Show("Произошла ошибка");
             }
-            else if (comboBox2.Text == "Телефон")
-            {
-                водителиBindingSource.Filter = "Телефон LIKE '" + textBox1.Text + "%'";
-            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int id, index;
+
+            index = dataGridView1.CurrentRow.Index;
+
+            id = (int)dataGridView1.Rows[index].Cells[0].Value;
+            автоBindingSource.Filter = "[Код водителя] = " + id.ToString();
+           
+
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            int id, index;
+
+            index = dataGridView1.CurrentRow.Index;
+
+            id = (int)dataGridView1.Rows[index].Cells[0].Value;
+            автоBindingSource.Filter = "[Код водителя] = " + id.ToString();
         }
     }
 }

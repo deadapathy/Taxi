@@ -28,5 +28,24 @@ namespace Taxi1
             Drivers f = new Drivers();
             f.Show();
         }
+
+        private void диспетчерыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dispatcher f = new Dispatcher();
+            f.Show();
+        }
+
+        private void тарифыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tariff f = new Tariff();
+            f.Show();
+
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 f = new AboutBox1();
+            f.Show();
+        }
     }
 }
