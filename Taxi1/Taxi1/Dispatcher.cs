@@ -105,7 +105,6 @@ namespace Taxi1
         {
             this.Validate();
             диспетчерыTableAdapter.Update(таксопаркDataSet.Диспетчеры);
-            диспетчерыTableAdapter.EndEdit();
             MessageBox.Show("Данные сохранены");
         }
 

@@ -659,19 +659,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Тариф" msprop:Generator_ColumnVarNameInTable="columnТариф" msprop:Generator_ColumnPropNameInRow="Тариф" msprop:Generator_ColumnPropNameInTable="ТарифColumn" msprop:Generator_UserColumnName="Тариф" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Тариф" msprop:Generator_ColumnVarNameInTable="columnТариф" msprop:Generator_ColumnPropNameInRow="Тариф" msprop:Generator_ColumnPropNameInTable="ТарифColumn" msprop:Generator_UserColumnName="Тариф" type="xs:string" minOccurs="0" />
               <xs:element name="Код_x0020_клиента" msprop:Generator_ColumnVarNameInTable="columnКод_клиента" msprop:Generator_ColumnPropNameInRow="Код_клиента" msprop:Generator_ColumnPropNameInTable="Код_клиентаColumn" msprop:Generator_UserColumnName="Код клиента" type="xs:int" minOccurs="0" />
               <xs:element name="Код_x0020_авто" msprop:Generator_ColumnVarNameInTable="columnКод_авто" msprop:Generator_ColumnPropNameInRow="Код_авто" msprop:Generator_ColumnPropNameInTable="Код_автоColumn" msprop:Generator_UserColumnName="Код авто" type="xs:int" minOccurs="0" />
               <xs:element name="Код_x0020_тарифа" msprop:Generator_ColumnVarNameInTable="columnКод_тарифа" msprop:Generator_ColumnPropNameInRow="Код_тарифа" msprop:Generator_ColumnPropNameInTable="Код_тарифаColumn" msprop:Generator_UserColumnName="Код тарифа" type="xs:int" minOccurs="0" />
               <xs:element name="Код_x0020_диспетчера" msprop:Generator_ColumnVarNameInTable="columnКод_диспетчера" msprop:Generator_ColumnPropNameInRow="Код_диспетчера" msprop:Generator_ColumnPropNameInTable="Код_диспетчераColumn" msprop:Generator_UserColumnName="Код диспетчера" type="xs:int" minOccurs="0" />
               <xs:element name="Статус_x0020_заказа" msprop:Generator_ColumnVarNameInTable="columnСтатус_заказа" msprop:Generator_ColumnPropNameInRow="Статус_заказа" msprop:Generator_ColumnPropNameInTable="Статус_заказаColumn" msprop:Generator_UserColumnName="Статус заказа" type="xs:boolean" minOccurs="0" />
               <xs:element name="Кол-во_x0020_км" msprop:Generator_ColumnVarNameInTable="_columnКол_во_км" msprop:Generator_ColumnPropNameInRow="_Кол_во_км" msprop:Generator_ColumnPropNameInTable="_Кол_во_кмColumn" msprop:Generator_UserColumnName="Кол-во км" type="xs:int" minOccurs="0" />
+              <xs:element name="К_x0020_оплате" msdata:ReadOnly="true" msdata:Expression="[Код тарифа] * [Кол-во км]" msprop:Generator_ColumnVarNameInTable="columnК_оплате" msprop:Generator_ColumnPropNameInRow="К_оплате" msprop:Generator_ColumnPropNameInTable="К_оплатеColumn" msprop:Generator_UserColumnName="К оплате" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

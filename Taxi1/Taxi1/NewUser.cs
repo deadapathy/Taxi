@@ -21,7 +21,6 @@ namespace Taxi1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.пользователиTableAdapter.EndEdit();
             this.пользователиTableAdapter.Update(this.таксопаркDataSet.Пользователи);
             this.Hide();
            

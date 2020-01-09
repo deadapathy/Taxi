@@ -72,6 +72,12 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewAuto.Designer.cs">
+      <DependentUpon>AddNewAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddNewClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +96,23 @@
     <Compile Include="AddNewDriver.Designer.cs">
       <DependentUpon>AddNewDriver.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewRequest.Designer.cs">
+      <DependentUpon>AddNewRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddNewTariff.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddNewTariff.Designer.cs">
       <DependentUpon>AddNewTariff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto.Designer.cs">
+      <DependentUpon>Auto.cs</DependentUpon>
     </Compile>
     <Compile Include="Clients.cs">
       <SubType>Form</SubType>
@@ -114,6 +132,12 @@
     <Compile Include="Drivers.Designer.cs">
       <DependentUpon>Drivers.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAuto.Designer.cs">
+      <DependentUpon>EditAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +155,12 @@
     </Compile>
     <Compile Include="EditDriver.Designer.cs">
       <DependentUpon>EditDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRequest.Designer.cs">
+      <DependentUpon>EditRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="EditTariff.cs">
       <SubType>Form</SubType>
@@ -164,6 +194,9 @@
     <Compile Include="Tariff.Designer.cs">
       <DependentUpon>Tariff.cs</DependentUpon>
     </Compile>
+    <Compile Include="ТаксопаркDataSet.cs">
+      <DependentUpon>ТаксопаркDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ТаксопаркDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewAuto.resx">
+      <DependentUpon>AddNewAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewClient.resx">
       <DependentUpon>AddNewClient.cs</DependentUpon>
@@ -181,8 +217,14 @@
     <EmbeddedResource Include="AddNewDriver.resx">
       <DependentUpon>AddNewDriver.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddNewRequest.resx">
+      <DependentUpon>AddNewRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddNewTariff.resx">
       <DependentUpon>AddNewTariff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auto.resx">
+      <DependentUpon>Auto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
@@ -193,6 +235,9 @@
     <EmbeddedResource Include="Drivers.resx">
       <DependentUpon>Drivers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditAuto.resx">
+      <DependentUpon>EditAuto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditClient.resx">
       <DependentUpon>EditClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditDriver.resx">
       <DependentUpon>EditDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRequest.resx">
+      <DependentUpon>EditRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditTariff.resx">
       <DependentUpon>EditTariff.cs</DependentUpon>
@@ -228,6 +276,10 @@
       <DependentUpon>Tariff.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\A.AssemblyInfoAttribute.datasource" />
+    <None Include="Properties\DataSources\SkinSoft.VisualStyler.Design.IDesignTimeColorsService.datasource" />
+    <None Include="Properties\DataSources\SkinSoft.VisualStyler.Licensing.VisualStylerLicense.datasource" />
+    <None Include="Properties\DataSources\SkinSoft.VisualStyler.VisualStyler.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -278,6 +330,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

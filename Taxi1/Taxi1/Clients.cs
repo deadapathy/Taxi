@@ -116,7 +116,6 @@ namespace Taxi1
         private void sToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.клиентыTableAdapter.EndEdit();
             this.клиентыTableAdapter.Update(таксопаркDataSet.Клиенты);
             MessageBox.Show("Данные сохранены");
         }

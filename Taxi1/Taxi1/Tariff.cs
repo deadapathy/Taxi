@@ -109,7 +109,7 @@ namespace Taxi1
         private void sToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.тарифыTableAdapter.EndEdit();
+            
             this.тарифыTableAdapter.Update(таксопаркDataSet.Тарифы);
             MessageBox.Show("Данные сохранены");
         }

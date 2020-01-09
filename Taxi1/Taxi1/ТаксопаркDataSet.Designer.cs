@@ -10,8 +10,6 @@
 
 #pragma warning disable 1591
 
-using System;
-
 namespace Taxi1 {
     
     
@@ -61,6 +59,7 @@ namespace Taxi1 {
             base.Tables.CollectionChanged += schemaChangedHandler;
             base.Relations.CollectionChanged += schemaChangedHandler;
             this.EndInit();
+            this.InitExpressions();
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -72,6 +71,9 @@ namespace Taxi1 {
                 global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
                 this.Tables.CollectionChanged += schemaChangedHandler1;
                 this.Relations.CollectionChanged += schemaChangedHandler1;
+                if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.ExcludeSchema)) {
+                    this.InitExpressions();
+                }
                 return;
             }
             string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
@@ -110,6 +112,7 @@ namespace Taxi1 {
             }
             else {
                 this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                this.InitExpressions();
             }
             this.GetSerializationData(info, context);
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -231,6 +234,7 @@ namespace Taxi1 {
         public override global::System.Data.DataSet Clone() {
             ТаксопаркDataSet cln = ((ТаксопаркDataSet)(base.Clone()));
             cln.InitVars();
+            cln.InitExpressions();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
         }
@@ -371,7 +375,7 @@ namespace Taxi1 {
             base.Tables.Add(this.tableВодители);
             this.tableДиспетчеры = new ДиспетчерыDataTable();
             base.Tables.Add(this.tableДиспетчеры);
-            this.tableЗаказы = new ЗаказыDataTable();
+            this.tableЗаказы = new ЗаказыDataTable(false);
             base.Tables.Add(this.tableЗаказы);
             this.tableКлиенты = new КлиентыDataTable();
             base.Tables.Add(this.tableКлиенты);
@@ -496,6 +500,12 @@ namespace Taxi1 {
             }
             xs.Add(dsSchema);
             return type;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitExpressions() {
+            this.Заказы.К_оплатеColumn.Expression = "[Код тарифа] * [Кол-во км]";
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1531,12 +1541,23 @@ namespace Taxi1 {
             
             private global::System.Data.DataColumn _columnКол_во_км;
             
+            private global::System.Data.DataColumn columnК_оплате;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ЗаказыDataTable() {
+            public ЗаказыDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ЗаказыDataTable(bool initExpressions) {
                 this.TableName = "Заказы";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -1670,6 +1691,14 @@ namespace Taxi1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn К_оплатеColumn {
+                get {
+                    return this.columnК_оплате;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1705,6 +1734,42 @@ namespace Taxi1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ЗаказыRow AddЗаказыRow(System.DateTime Дата_заказа, string _Откуда_Куда, string Клиент, string Водитель, string Номер_авто, string Тариф, КлиентыRow parentКлиентыRowByКлиентыЗаказы, АвтоRow parentАвтоRowByАвтоЗаказы, ТарифыRow parentТарифыRowByТарифыЗаказы, ДиспетчерыRow parentДиспетчерыRowByДиспетчерыЗаказы, bool Статус_заказа, int _Кол_во_км, int К_оплате) {
+                ЗаказыRow rowЗаказыRow = ((ЗаказыRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Дата_заказа,
+                        _Откуда_Куда,
+                        Клиент,
+                        Водитель,
+                        Номер_авто,
+                        Тариф,
+                        null,
+                        null,
+                        null,
+                        null,
+                        Статус_заказа,
+                        _Кол_во_км,
+                        К_оплате};
+                if ((parentКлиентыRowByКлиентыЗаказы != null)) {
+                    columnValuesArray[7] = parentКлиентыRowByКлиентыЗаказы[0];
+                }
+                if ((parentАвтоRowByАвтоЗаказы != null)) {
+                    columnValuesArray[8] = parentАвтоRowByАвтоЗаказы[0];
+                }
+                if ((parentТарифыRowByТарифыЗаказы != null)) {
+                    columnValuesArray[9] = parentТарифыRowByТарифыЗаказы[0];
+                }
+                if ((parentДиспетчерыRowByДиспетчерыЗаказы != null)) {
+                    columnValuesArray[10] = parentДиспетчерыRowByДиспетчерыЗаказы[0];
+                }
+                rowЗаказыRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowЗаказыRow);
+                return rowЗаказыRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ЗаказыRow AddЗаказыRow(System.DateTime Дата_заказа, string _Откуда_Куда, string Клиент, string Водитель, string Номер_авто, string Тариф, КлиентыRow parentКлиентыRowByКлиентыЗаказы, АвтоRow parentАвтоRowByАвтоЗаказы, ТарифыRow parentТарифыRowByТарифыЗаказы, ДиспетчерыRow parentДиспетчерыRowByДиспетчерыЗаказы, bool Статус_заказа, int _Кол_во_км) {
                 ЗаказыRow rowЗаказыRow = ((ЗаказыRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -1720,7 +1785,8 @@ namespace Taxi1 {
                         null,
                         null,
                         Статус_заказа,
-                        _Кол_во_км};
+                        _Кол_во_км,
+                        null};
                 if ((parentКлиентыRowByКлиентыЗаказы != null)) {
                     columnValuesArray[7] = parentКлиентыRowByКлиентыЗаказы[0];
                 }
@@ -1775,6 +1841,7 @@ namespace Taxi1 {
                 this.columnКод_диспетчера = base.Columns["Код диспетчера"];
                 this.columnСтатус_заказа = base.Columns["Статус заказа"];
                 this._columnКол_во_км = base.Columns["Кол-во км"];
+                this.columnК_оплате = base.Columns["К оплате"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1810,6 +1877,8 @@ namespace Taxi1 {
                 this._columnКол_во_км.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnКол_во_км");
                 this._columnКол_во_км.ExtendedProperties.Add("Generator_UserColumnName", "Кол-во км");
                 base.Columns.Add(this._columnКол_во_км);
+                this.columnК_оплате = new global::System.Data.DataColumn("К оплате", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnК_оплате);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnКод}, true));
                 this.columnКод.AutoIncrement = true;
@@ -1821,7 +1890,7 @@ namespace Taxi1 {
                 this.columnКлиент.MaxLength = 255;
                 this.columnВодитель.MaxLength = 255;
                 this.columnНомер_авто.MaxLength = 255;
-                this.columnТариф.MaxLength = 255;
+                this.columnК_оплате.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1840,6 +1909,12 @@ namespace Taxi1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(ЗаказыRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitExpressions() {
+                this.К_оплатеColumn.Expression = "[Код тарифа] * [Кол-во км]";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3572,6 +3647,22 @@ namespace Taxi1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int К_оплате {
+                get {
+                    try {
+                        return ((int)(this[this.tableЗаказы.К_оплатеColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'К оплате\' в таблице \'Заказы\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableЗаказы.К_оплатеColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public АвтоRow АвтоRow {
                 get {
                     return ((АвтоRow)(this.GetParentRow(this.Table.ParentRelations["АвтоЗаказы"])));
@@ -3756,6 +3847,18 @@ namespace Taxi1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Set_Кол_во_кмNull() {
                 this[this.tableЗаказы._Кол_во_кмColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsК_оплатеNull() {
+                return this.IsNull(this.tableЗаказы.К_оплатеColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetК_оплатеNull() {
+                this[this.tableЗаказы.К_оплатеColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4767,11 +4870,6 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                 }
             }
         }
-
-        internal void EndEdit()
-        {
-            
-        }
     }
     
     /// <summary>
@@ -5617,11 +5715,6 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                 }
             }
         }
-
-        internal void EndEdit()
-        {
-         
-        }
     }
     
     /// <summary>
@@ -5887,7 +5980,7 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ТаксопаркDataSet.ЗаказыDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ТаксопаркDataSet.ЗаказыDataTable dataTable = new ТаксопаркDataSet.ЗаказыDataTable();
+            ТаксопаркDataSet.ЗаказыDataTable dataTable = new ТаксопаркDataSet.ЗаказыDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6775,11 +6868,6 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                 }
             }
         }
-
-        internal void EndEdit()
-        {
-           
-        }
     }
     
     /// <summary>
@@ -7127,11 +7215,6 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-
-        internal void EndEdit()
-        {
-            
         }
     }
     
@@ -7481,11 +7564,6 @@ namespace Taxi1.ТаксопаркDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-
-        internal void EndEdit()
-        {
-       
         }
     }
     

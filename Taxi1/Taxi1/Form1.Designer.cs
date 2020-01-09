@@ -165,6 +165,7 @@
             // 
             this.visualStyler1.HostForm = this;
             this.visualStyler1.License = ((SkinSoft.VisualStyler.Licensing.VisualStylerLicense)(resources.GetObject("visualStyler1.License")));
+           
             this.visualStyler1.LoadVisualStyle(null, "Office2007 (Black).vssf");
             // 
             // Form1
@@ -214,7 +215,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         public ТаксопаркDataSetTableAdapters.ПользователиTableAdapter пользователиTableAdapter;
-        private SkinSoft.VisualStyler.VisualStyler visualStyler1;
+        public SkinSoft.VisualStyler.VisualStyler visualStyler1;
     }
 }
 
