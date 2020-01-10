@@ -109,7 +109,7 @@
             // 
             // aToolStripMenuItem
             // 
-            this.aToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_Plus_206460;
+        
             this.aToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -117,7 +117,7 @@
             // 
             // eToolStripMenuItem
             // 
-            this.eToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_edit_find_replace_118921;
+          
             this.eToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.eToolStripMenuItem.Name = "eToolStripMenuItem";
             this.eToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -125,7 +125,7 @@
             // 
             // dToolStripMenuItem
             // 
-            this.dToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_f_cross_256_282471;
+       
             this.dToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.dToolStripMenuItem.Name = "dToolStripMenuItem";
             this.dToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -133,7 +133,6 @@
             // 
             // sToolStripMenuItem
             // 
-            this.sToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_floppy_285657;
             this.sToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.Size = new System.Drawing.Size(60, 52);

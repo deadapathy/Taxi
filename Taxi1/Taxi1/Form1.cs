@@ -75,6 +75,21 @@ namespace Taxi1
 
         }
 
-        
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = true;
+                var checkBox = (CheckBox)sender;
+                checkBox.Text = "Показать";
+
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = false;
+                var checkBox = (CheckBox)sender;
+                checkBox.Text = "Скрыть";
+            }
+        }
     }
 }

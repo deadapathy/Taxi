@@ -221,6 +221,7 @@ namespace Taxi1
             catch (Exception)
             {
                 MessageBox.Show("Произошла ошибка");
+
             }
         }
 

@@ -88,7 +88,7 @@
             // 
             // sToolStripMenuItem
             // 
-            this.sToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_floppy_285657;
+         
             this.sToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -96,7 +96,7 @@
             // 
             // exToolStripMenuItem
             // 
-            this.exToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_excel_272697;
+          
             this.exToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exToolStripMenuItem.Name = "exToolStripMenuItem";
             this.exToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -104,7 +104,7 @@
             // 
             // aToolStripMenuItem
             // 
-            this.aToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_Plus_206460;
+ 
             this.aToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -112,7 +112,7 @@
             // 
             // eToolStripMenuItem
             // 
-            this.eToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_edit_find_replace_118921;
+          
             this.eToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.eToolStripMenuItem.Name = "eToolStripMenuItem";
             this.eToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -120,7 +120,7 @@
             // 
             // dToolStripMenuItem
             // 
-            this.dToolStripMenuItem.Image = global::Taxi1.Properties.Resources.iconfinder_f_cross_256_282471;
+          
             this.dToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.dToolStripMenuItem.Name = "dToolStripMenuItem";
             this.dToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
@@ -205,7 +205,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Taxi1.Properties.Resources.iconfinder_system_search_118797;
+           
             this.pictureBox1.Location = new System.Drawing.Point(257, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
