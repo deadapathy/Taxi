@@ -30,21 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.таксопаркDataSet = new Taxi1.ТаксопаркDataSet();
-            this.тарифыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.тарифыTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ТарифыTableAdapter();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.наименованиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ценаЗаКмDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.тарифыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.таксопаркDataSet = new Taxi1.ТаксопаркDataSet();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.тарифыTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ТарифыTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.тарифыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -58,35 +57,9 @@
             this.dataGridView1.DataSource = this.тарифыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(488, 175);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(245, 211);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem,
-            this.eToolStripMenuItem,
-            this.dToolStripMenuItem,
-            this.sToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(507, 56);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // таксопаркDataSet
-            // 
-            this.таксопаркDataSet.DataSetName = "ТаксопаркDataSet";
-            this.таксопаркDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // тарифыBindingSource
-            // 
-            this.тарифыBindingSource.DataMember = "Тарифы";
-            this.тарифыBindingSource.DataSource = this.таксопаркDataSet;
-            // 
-            // тарифыTableAdapter
-            // 
-            this.тарифыTableAdapter.ClearBeforeFill = true;
             // 
             // кодDataGridViewTextBoxColumn
             // 
@@ -107,53 +80,77 @@
             this.ценаЗаКмDataGridViewTextBoxColumn.HeaderText = "Цена за км";
             this.ценаЗаКмDataGridViewTextBoxColumn.Name = "ценаЗаКмDataGridViewTextBoxColumn";
             // 
+            // тарифыBindingSource
+            // 
+            this.тарифыBindingSource.DataMember = "Тарифы";
+            this.тарифыBindingSource.DataSource = this.таксопаркDataSet;
+            // 
+            // таксопаркDataSet
+            // 
+            this.таксопаркDataSet.DataSetName = "ТаксопаркDataSet";
+            this.таксопаркDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aToolStripMenuItem,
+            this.eToolStripMenuItem,
+            this.dToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(266, 56);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // aToolStripMenuItem
             // 
-        
+            this.aToolStripMenuItem.Image = global::Taxi1.Properties.Resources.add1;
             this.aToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.aToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
             this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
             // 
             // eToolStripMenuItem
             // 
-          
+            this.eToolStripMenuItem.Image = global::Taxi1.Properties.Resources.edit1;
             this.eToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.eToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.eToolStripMenuItem.Name = "eToolStripMenuItem";
             this.eToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
             this.eToolStripMenuItem.Click += new System.EventHandler(this.eToolStripMenuItem_Click);
             // 
             // dToolStripMenuItem
             // 
-       
+            this.dToolStripMenuItem.Image = global::Taxi1.Properties.Resources.delete;
             this.dToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.dToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.dToolStripMenuItem.Name = "dToolStripMenuItem";
             this.dToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
             this.dToolStripMenuItem.Click += new System.EventHandler(this.dToolStripMenuItem_Click);
             // 
-            // sToolStripMenuItem
+            // тарифыTableAdapter
             // 
-            this.sToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(60, 52);
-            this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
+            this.тарифыTableAdapter.ClearBeforeFill = true;
             // 
             // Tariff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 240);
+            this.ClientSize = new System.Drawing.Size(266, 282);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Tariff";
             this.Text = "Tariff";
             this.Load += new System.EventHandler(this.Tariff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.тарифыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тарифыBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +169,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ценаЗаКмDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
     }
 }

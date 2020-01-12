@@ -31,73 +31,93 @@ namespace Taxi1
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddNewDispatcher f = new AddNewDispatcher();
-
-            if (f.ShowDialog() == DialogResult.OK)
+            try
             {
-                string Sname, Name, Lname, Telephone;
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    string Sname, Name, Lname, Telephone;
 
-                Sname = f.textBox1.Text;
-                Name = f.textBox2.Text;
-                Lname = f.textBox3.Text;
-                Telephone = f.textBox4.Text;
+                    Sname = f.textBox1.Text;
+                    Name = f.textBox2.Text;
+                    Lname = f.textBox3.Text;
+                    Telephone = f.textBox4.Text;
 
-                this.диспетчерыTableAdapter.Insert(Sname, Name, Lname, Telephone);
-                this.диспетчерыTableAdapter.Fill(таксопаркDataSet.Диспетчеры);
+                    this.диспетчерыTableAdapter.Insert(Sname, Name, Lname, Telephone);
+                    this.диспетчерыTableAdapter.Fill(таксопаркDataSet.Диспетчеры);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка");
             }
         }
 
         private void eToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditDispatcher f = new EditDispatcher();
-            string Sname, Name, Lname, Telephone;
-            int id, index;
-
-            if (dataGridView1.RowCount <= 1) return;
-            index = dataGridView1.CurrentRow.Index;
-            if (index == dataGridView1.RowCount - 1) return;
-
-            id = (int)dataGridView1.Rows[index].Cells[0].Value;
-            Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
-            Name = (string)dataGridView1.Rows[index].Cells[2].Value;
-            Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
-            Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
-
-            f.textBox1.Text = Sname;
-            f.textBox2.Text = Name;
-            f.textBox3.Text = Lname;
-            f.textBox4.Text = Telephone;
-
-            if (f.ShowDialog() == DialogResult.OK)
+            try
             {
-                string sSname, sName, sLname, sTelephone;
+                EditDispatcher f = new EditDispatcher();
+                string Sname, Name, Lname, Telephone;
+                int id, index;
 
-                sSname = f.textBox1.Text;
-                sName = f.textBox2.Text;
-                sLname = f.textBox3.Text;
-                sTelephone = f.textBox4.Text;
+                if (dataGridView1.RowCount <= 1) return;
+                index = dataGridView1.CurrentRow.Index;
+                if (index == dataGridView1.RowCount - 1) return;
 
-                this.диспетчерыTableAdapter.Update(sSname, sName, sLname, sTelephone, id, Sname, Name, Lname, Telephone);
-                this.диспетчерыTableAdapter.Fill(таксопаркDataSet.Диспетчеры);
+                id = (int)dataGridView1.Rows[index].Cells[0].Value;
+                Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
+                Name = (string)dataGridView1.Rows[index].Cells[2].Value;
+                Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
+                Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
+
+                f.textBox1.Text = Sname;
+                f.textBox2.Text = Name;
+                f.textBox3.Text = Lname;
+                f.textBox4.Text = Telephone;
+
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    string sSname, sName, sLname, sTelephone;
+
+                    sSname = f.textBox1.Text;
+                    sName = f.textBox2.Text;
+                    sLname = f.textBox3.Text;
+                    sTelephone = f.textBox4.Text;
+
+                    this.диспетчерыTableAdapter.Update(sSname, sName, sLname, sTelephone, id, Sname, Name, Lname, Telephone);
+                    this.диспетчерыTableAdapter.Fill(таксопаркDataSet.Диспетчеры);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка");
             }
         }
 
         private void dToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string Sname, Name, Lname, Telephone;
-            int id, index;
-
-            index = dataGridView1.CurrentRow.Index;
-
-            id = (int)dataGridView1.Rows[index].Cells[0].Value;
-            Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
-            Name = (string)dataGridView1.Rows[index].Cells[2].Value;
-            Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
-            Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
-
-            if (MessageBox.Show("Вы дейсвительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                this.диспетчерыTableAdapter.Delete(id, Sname, Name, Lname, Telephone);
-                this.диспетчерыTableAdapter.Fill(таксопаркDataSet.Диспетчеры);
+                string Sname, Name, Lname, Telephone;
+                int id, index;
+
+                index = dataGridView1.CurrentRow.Index;
+
+                id = (int)dataGridView1.Rows[index].Cells[0].Value;
+                Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
+                Name = (string)dataGridView1.Rows[index].Cells[2].Value;
+                Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
+                Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
+
+                if (MessageBox.Show("Вы дейсвительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.диспетчерыTableAdapter.Delete(id, Sname, Name, Lname, Telephone);
+                    this.диспетчерыTableAdapter.Fill(таксопаркDataSet.Диспетчеры);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка");
             }
         }
 
@@ -152,17 +172,24 @@ namespace Taxi1
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if(comboBox1.Text == "Фамилия")
+            try
             {
-                диспетчерыBindingSource.Filter = "Фамилия LIKE '" + textBox1.Text + "%'";
+                if (comboBox1.Text == "Фамилия")
+                {
+                    диспетчерыBindingSource.Filter = "Фамилия LIKE '" + textBox1.Text + "%'";
+                }
+                else if (comboBox1.Text == "Имя")
+                {
+                    диспетчерыBindingSource.Filter = "Имя LIKE '" + textBox1.Text + "%'";
+                }
+                else if (comboBox1.Text == "Телефон")
+                {
+                    диспетчерыBindingSource.Filter = "Телефон LIKE '" + textBox1.Text + "%'";
+                }
             }
-            else if(comboBox1.Text == "Имя")
+            catch (Exception)
             {
-                диспетчерыBindingSource.Filter = "Имя LIKE '" + textBox1.Text + "%'";
-            }
-            else if(comboBox1.Text == "Телефон")
-            {
-                диспетчерыBindingSource.Filter = "Телефон LIKE '" + textBox1.Text + "%'";
+                MessageBox.Show("Произошла ошибка");
             }
         }
     }

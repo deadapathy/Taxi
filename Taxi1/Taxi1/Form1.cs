@@ -56,7 +56,7 @@ namespace Taxi1
             NewUser f = new NewUser();
             if(f.ShowDialog() == DialogResult.OK)
             {
-                string login, pass;
+               string login, pass;
 
                 login = f.textBox1.Text;
                 pass = f.textBox2.Text;
@@ -64,8 +64,11 @@ namespace Taxi1
                 this.пользователиTableAdapter.Insert(login, pass);
                 this.пользователиTableAdapter.Fill(таксопаркDataSet.Пользователи);
 
-                
+               
             }
+
+           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -90,19 +90,26 @@ namespace Taxi1
 
         private void dToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string Name;
-            int Cost, index, id;
-
-            index = dataGridView1.CurrentRow.Index;
-
-            id = (int)dataGridView1.Rows[index].Cells[0].Value;
-            Name = (string)dataGridView1.Rows[index].Cells[1].Value;
-            Cost = (int)dataGridView1.Rows[index].Cells[2].Value;
-
-            if(MessageBox.Show("Вы действительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                this.тарифыTableAdapter.Delete(id, Name, Cost);
-                this.тарифыTableAdapter.Fill(таксопаркDataSet.Тарифы);
+                string Name;
+                int Cost, index, id;
+
+                index = dataGridView1.CurrentRow.Index;
+
+                id = (int)dataGridView1.Rows[index].Cells[0].Value;
+                Name = (string)dataGridView1.Rows[index].Cells[1].Value;
+                Cost = (int)dataGridView1.Rows[index].Cells[2].Value;
+
+                if (MessageBox.Show("Вы действительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.тарифыTableAdapter.Delete(id, Name, Cost);
+                    this.тарифыTableAdapter.Fill(таксопаркDataSet.Тарифы);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка");
             }
         }
 

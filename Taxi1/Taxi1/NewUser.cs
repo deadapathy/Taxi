@@ -24,7 +24,13 @@ namespace Taxi1
             this.пользователиTableAdapter.Update(this.таксопаркDataSet.Пользователи);
             this.Hide();
            
-            MessageBox.Show("Новые данные сохранены");
+            MessageBox.Show("Регистрация завершена");
+        }
+
+
+        private void NewUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

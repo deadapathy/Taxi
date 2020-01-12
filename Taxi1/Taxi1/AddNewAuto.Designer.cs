@@ -148,7 +148,7 @@
             this.Name = "AddNewAuto";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Добавление авто";
+            this.Text = "Регистрация авто";
             this.ResumeLayout(false);
             this.PerformLayout();
 

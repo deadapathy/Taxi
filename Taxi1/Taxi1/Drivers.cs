@@ -102,19 +102,14 @@ namespace Taxi1
             {
                 try
                 {
-                    string sSname, sName, sLname, sTelephone, sNumAuto, sMarka, sColor;
+                    string sSname, sName, sLname, sTelephone;
                     bool sStatus;
-                    int sidDriver;
+                    
 
                     sSname = f.textBox1.Text;
                     sName = f.textBox2.Text;
                     sLname = f.textBox3.Text;
                     sTelephone = f.textBox4.Text;
-
-                    sNumAuto = f.textBox5.Text;
-                    sMarka = f.textBox6.Text;
-                    sColor = f.textBox7.Text;
-                    sidDriver = Convert.ToInt32(f.textBox8.Text);
                     sStatus = f.checkBox1.Checked;
 
                     this.водителиTableAdapter.Update(sSname, sName, sLname, sTelephone, sStatus, Id, Sname, Name, Lname, Telephone, Status);
@@ -124,7 +119,7 @@ namespace Taxi1
                 }
                 catch(Exception)
                 {
-                    MessageBox.Show("Произошла ошибка");
+                    MessageBox.Show("Невозможно удалить пустую строку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

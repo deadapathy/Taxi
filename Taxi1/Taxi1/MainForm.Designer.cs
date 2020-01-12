@@ -31,6 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.кодDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаЗаказаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.откудаКудаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.клиентDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.водительDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерАвтоDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.тарифDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодКлиентаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодАвтоDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодТарифаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодДиспетчераDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.статусЗаказаDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.колвоКмDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кОплатеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.заказыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.таксопаркDataSet = new Taxi1.ТаксопаркDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -73,20 +87,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.заказыTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ЗаказыTableAdapter();
-            this.кодDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаЗаказаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.откудаКудаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.клиентDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.водительDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номерАвтоDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.тарифDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодКлиентаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодАвтоDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодТарифаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодДиспетчераDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.статусЗаказаDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.колвоКмDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кОплатеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.заказыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).BeginInit();
@@ -128,6 +128,102 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
+            // 
+            // кодDataGridViewTextBoxColumn2
+            // 
+            this.кодDataGridViewTextBoxColumn2.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn2.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn2.Name = "кодDataGridViewTextBoxColumn2";
+            this.кодDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // датаЗаказаDataGridViewTextBoxColumn2
+            // 
+            this.датаЗаказаDataGridViewTextBoxColumn2.DataPropertyName = "Дата заказа";
+            this.датаЗаказаDataGridViewTextBoxColumn2.HeaderText = "Дата заказа";
+            this.датаЗаказаDataGridViewTextBoxColumn2.Name = "датаЗаказаDataGridViewTextBoxColumn2";
+            this.датаЗаказаDataGridViewTextBoxColumn2.Width = 120;
+            // 
+            // откудаКудаDataGridViewTextBoxColumn2
+            // 
+            this.откудаКудаDataGridViewTextBoxColumn2.DataPropertyName = "Откуда-Куда";
+            this.откудаКудаDataGridViewTextBoxColumn2.HeaderText = "Откуда-Куда";
+            this.откудаКудаDataGridViewTextBoxColumn2.Name = "откудаКудаDataGridViewTextBoxColumn2";
+            this.откудаКудаDataGridViewTextBoxColumn2.Width = 250;
+            // 
+            // клиентDataGridViewTextBoxColumn2
+            // 
+            this.клиентDataGridViewTextBoxColumn2.DataPropertyName = "Клиент";
+            this.клиентDataGridViewTextBoxColumn2.HeaderText = "Клиент";
+            this.клиентDataGridViewTextBoxColumn2.Name = "клиентDataGridViewTextBoxColumn2";
+            this.клиентDataGridViewTextBoxColumn2.Width = 120;
+            // 
+            // водительDataGridViewTextBoxColumn2
+            // 
+            this.водительDataGridViewTextBoxColumn2.DataPropertyName = "Водитель";
+            this.водительDataGridViewTextBoxColumn2.HeaderText = "Водитель";
+            this.водительDataGridViewTextBoxColumn2.Name = "водительDataGridViewTextBoxColumn2";
+            this.водительDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // номерАвтоDataGridViewTextBoxColumn2
+            // 
+            this.номерАвтоDataGridViewTextBoxColumn2.DataPropertyName = "Номер авто";
+            this.номерАвтоDataGridViewTextBoxColumn2.HeaderText = "Номер авто";
+            this.номерАвтоDataGridViewTextBoxColumn2.Name = "номерАвтоDataGridViewTextBoxColumn2";
+            this.номерАвтоDataGridViewTextBoxColumn2.Width = 110;
+            // 
+            // тарифDataGridViewTextBoxColumn2
+            // 
+            this.тарифDataGridViewTextBoxColumn2.DataPropertyName = "Тариф";
+            this.тарифDataGridViewTextBoxColumn2.HeaderText = "Тариф";
+            this.тарифDataGridViewTextBoxColumn2.Name = "тарифDataGridViewTextBoxColumn2";
+            this.тарифDataGridViewTextBoxColumn2.Width = 120;
+            // 
+            // кодКлиентаDataGridViewTextBoxColumn1
+            // 
+            this.кодКлиентаDataGridViewTextBoxColumn1.DataPropertyName = "Код клиента";
+            this.кодКлиентаDataGridViewTextBoxColumn1.HeaderText = "Код клиента";
+            this.кодКлиентаDataGridViewTextBoxColumn1.Name = "кодКлиентаDataGridViewTextBoxColumn1";
+            this.кодКлиентаDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // кодАвтоDataGridViewTextBoxColumn1
+            // 
+            this.кодАвтоDataGridViewTextBoxColumn1.DataPropertyName = "Код авто";
+            this.кодАвтоDataGridViewTextBoxColumn1.HeaderText = "Код авто";
+            this.кодАвтоDataGridViewTextBoxColumn1.Name = "кодАвтоDataGridViewTextBoxColumn1";
+            this.кодАвтоDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // кодТарифаDataGridViewTextBoxColumn1
+            // 
+            this.кодТарифаDataGridViewTextBoxColumn1.DataPropertyName = "Код тарифа";
+            this.кодТарифаDataGridViewTextBoxColumn1.HeaderText = "Код тарифа";
+            this.кодТарифаDataGridViewTextBoxColumn1.Name = "кодТарифаDataGridViewTextBoxColumn1";
+            this.кодТарифаDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // кодДиспетчераDataGridViewTextBoxColumn1
+            // 
+            this.кодДиспетчераDataGridViewTextBoxColumn1.DataPropertyName = "Код диспетчера";
+            this.кодДиспетчераDataGridViewTextBoxColumn1.HeaderText = "Код диспетчера";
+            this.кодДиспетчераDataGridViewTextBoxColumn1.Name = "кодДиспетчераDataGridViewTextBoxColumn1";
+            this.кодДиспетчераDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // статусЗаказаDataGridViewCheckBoxColumn1
+            // 
+            this.статусЗаказаDataGridViewCheckBoxColumn1.DataPropertyName = "Статус заказа";
+            this.статусЗаказаDataGridViewCheckBoxColumn1.HeaderText = "Статус заказа";
+            this.статусЗаказаDataGridViewCheckBoxColumn1.Name = "статусЗаказаDataGridViewCheckBoxColumn1";
+            // 
+            // колвоКмDataGridViewTextBoxColumn1
+            // 
+            this.колвоКмDataGridViewTextBoxColumn1.DataPropertyName = "Кол-во км";
+            this.колвоКмDataGridViewTextBoxColumn1.HeaderText = "Кол-во км";
+            this.колвоКмDataGridViewTextBoxColumn1.Name = "колвоКмDataGridViewTextBoxColumn1";
+            // 
+            // кОплатеDataGridViewTextBoxColumn
+            // 
+            this.кОплатеDataGridViewTextBoxColumn.DataPropertyName = "К оплате";
+            this.кОплатеDataGridViewTextBoxColumn.HeaderText = "К оплате";
+            this.кОплатеDataGridViewTextBoxColumn.Name = "кОплатеDataGridViewTextBoxColumn";
+            this.кОплатеDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // заказыBindingSource
             // 
@@ -343,7 +439,7 @@
             // 
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(796, -1);
+            this.groupBox2.Location = new System.Drawing.Point(840, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(232, 65);
             this.groupBox2.TabIndex = 10;
@@ -375,7 +471,7 @@
             this.groupBox3.Controls.Add(this.pictureBox3);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Location = new System.Drawing.Point(518, -1);
+            this.groupBox3.Location = new System.Drawing.Point(556, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(278, 65);
             this.groupBox3.TabIndex = 11;
@@ -462,102 +558,6 @@
             // заказыTableAdapter
             // 
             this.заказыTableAdapter.ClearBeforeFill = true;
-            // 
-            // кодDataGridViewTextBoxColumn2
-            // 
-            this.кодDataGridViewTextBoxColumn2.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn2.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn2.Name = "кодDataGridViewTextBoxColumn2";
-            this.кодDataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // датаЗаказаDataGridViewTextBoxColumn2
-            // 
-            this.датаЗаказаDataGridViewTextBoxColumn2.DataPropertyName = "Дата заказа";
-            this.датаЗаказаDataGridViewTextBoxColumn2.HeaderText = "Дата заказа";
-            this.датаЗаказаDataGridViewTextBoxColumn2.Name = "датаЗаказаDataGridViewTextBoxColumn2";
-            this.датаЗаказаDataGridViewTextBoxColumn2.Width = 120;
-            // 
-            // откудаКудаDataGridViewTextBoxColumn2
-            // 
-            this.откудаКудаDataGridViewTextBoxColumn2.DataPropertyName = "Откуда-Куда";
-            this.откудаКудаDataGridViewTextBoxColumn2.HeaderText = "Откуда-Куда";
-            this.откудаКудаDataGridViewTextBoxColumn2.Name = "откудаКудаDataGridViewTextBoxColumn2";
-            this.откудаКудаDataGridViewTextBoxColumn2.Width = 250;
-            // 
-            // клиентDataGridViewTextBoxColumn2
-            // 
-            this.клиентDataGridViewTextBoxColumn2.DataPropertyName = "Клиент";
-            this.клиентDataGridViewTextBoxColumn2.HeaderText = "Клиент";
-            this.клиентDataGridViewTextBoxColumn2.Name = "клиентDataGridViewTextBoxColumn2";
-            this.клиентDataGridViewTextBoxColumn2.Width = 120;
-            // 
-            // водительDataGridViewTextBoxColumn2
-            // 
-            this.водительDataGridViewTextBoxColumn2.DataPropertyName = "Водитель";
-            this.водительDataGridViewTextBoxColumn2.HeaderText = "Водитель";
-            this.водительDataGridViewTextBoxColumn2.Name = "водительDataGridViewTextBoxColumn2";
-            this.водительDataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // номерАвтоDataGridViewTextBoxColumn2
-            // 
-            this.номерАвтоDataGridViewTextBoxColumn2.DataPropertyName = "Номер авто";
-            this.номерАвтоDataGridViewTextBoxColumn2.HeaderText = "Номер авто";
-            this.номерАвтоDataGridViewTextBoxColumn2.Name = "номерАвтоDataGridViewTextBoxColumn2";
-            this.номерАвтоDataGridViewTextBoxColumn2.Width = 110;
-            // 
-            // тарифDataGridViewTextBoxColumn2
-            // 
-            this.тарифDataGridViewTextBoxColumn2.DataPropertyName = "Тариф";
-            this.тарифDataGridViewTextBoxColumn2.HeaderText = "Тариф";
-            this.тарифDataGridViewTextBoxColumn2.Name = "тарифDataGridViewTextBoxColumn2";
-            this.тарифDataGridViewTextBoxColumn2.Width = 120;
-            // 
-            // кодКлиентаDataGridViewTextBoxColumn1
-            // 
-            this.кодКлиентаDataGridViewTextBoxColumn1.DataPropertyName = "Код клиента";
-            this.кодКлиентаDataGridViewTextBoxColumn1.HeaderText = "Код клиента";
-            this.кодКлиентаDataGridViewTextBoxColumn1.Name = "кодКлиентаDataGridViewTextBoxColumn1";
-            this.кодКлиентаDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // кодАвтоDataGridViewTextBoxColumn1
-            // 
-            this.кодАвтоDataGridViewTextBoxColumn1.DataPropertyName = "Код авто";
-            this.кодАвтоDataGridViewTextBoxColumn1.HeaderText = "Код авто";
-            this.кодАвтоDataGridViewTextBoxColumn1.Name = "кодАвтоDataGridViewTextBoxColumn1";
-            this.кодАвтоDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // кодТарифаDataGridViewTextBoxColumn1
-            // 
-            this.кодТарифаDataGridViewTextBoxColumn1.DataPropertyName = "Код тарифа";
-            this.кодТарифаDataGridViewTextBoxColumn1.HeaderText = "Код тарифа";
-            this.кодТарифаDataGridViewTextBoxColumn1.Name = "кодТарифаDataGridViewTextBoxColumn1";
-            this.кодТарифаDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // кодДиспетчераDataGridViewTextBoxColumn1
-            // 
-            this.кодДиспетчераDataGridViewTextBoxColumn1.DataPropertyName = "Код диспетчера";
-            this.кодДиспетчераDataGridViewTextBoxColumn1.HeaderText = "Код диспетчера";
-            this.кодДиспетчераDataGridViewTextBoxColumn1.Name = "кодДиспетчераDataGridViewTextBoxColumn1";
-            this.кодДиспетчераDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // статусЗаказаDataGridViewCheckBoxColumn1
-            // 
-            this.статусЗаказаDataGridViewCheckBoxColumn1.DataPropertyName = "Статус заказа";
-            this.статусЗаказаDataGridViewCheckBoxColumn1.HeaderText = "Статус заказа";
-            this.статусЗаказаDataGridViewCheckBoxColumn1.Name = "статусЗаказаDataGridViewCheckBoxColumn1";
-            // 
-            // колвоКмDataGridViewTextBoxColumn1
-            // 
-            this.колвоКмDataGridViewTextBoxColumn1.DataPropertyName = "Кол-во км";
-            this.колвоКмDataGridViewTextBoxColumn1.HeaderText = "Кол-во км";
-            this.колвоКмDataGridViewTextBoxColumn1.Name = "колвоКмDataGridViewTextBoxColumn1";
-            // 
-            // кОплатеDataGridViewTextBoxColumn
-            // 
-            this.кОплатеDataGridViewTextBoxColumn.DataPropertyName = "К оплате";
-            this.кОплатеDataGridViewTextBoxColumn.HeaderText = "К оплате";
-            this.кОплатеDataGridViewTextBoxColumn.Name = "кОплатеDataGridViewTextBoxColumn";
-            this.кОплатеDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // MainForm
             // 

@@ -94,22 +94,29 @@ namespace Taxi1
 
         private void kToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string Sname, Name, Lname, Telephone, OtkudaKuda;
-            int id, index;
-
-            index = dataGridView1.CurrentRow.Index;
-
-            id = (int)dataGridView1.Rows[index].Cells[0].Value;
-            Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
-            Name = (string)dataGridView1.Rows[index].Cells[2].Value;
-            Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
-            Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
-            OtkudaKuda = (string)dataGridView1.Rows[index].Cells[5].Value;
-
-            if(MessageBox.Show("Вы действительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            try
             {
-                this.клиентыTableAdapter.Delete(id, Sname, Name, Lname, Telephone, OtkudaKuda);
-                this.клиентыTableAdapter.Fill(таксопаркDataSet.Клиенты);
+                string Sname, Name, Lname, Telephone, OtkudaKuda;
+                int id, index;
+
+                index = dataGridView1.CurrentRow.Index;
+
+                id = (int)dataGridView1.Rows[index].Cells[0].Value;
+                Sname = (string)dataGridView1.Rows[index].Cells[1].Value;
+                Name = (string)dataGridView1.Rows[index].Cells[2].Value;
+                Lname = (string)dataGridView1.Rows[index].Cells[3].Value;
+                Telephone = (string)dataGridView1.Rows[index].Cells[4].Value;
+                OtkudaKuda = (string)dataGridView1.Rows[index].Cells[5].Value;
+
+                if (MessageBox.Show("Вы действительно хотите удалить данную строку?", "Удаление", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    this.клиентыTableAdapter.Delete(id, Sname, Name, Lname, Telephone, OtkudaKuda);
+                    this.клиентыTableAdapter.Fill(таксопаркDataSet.Клиенты);
+                }
+            }
+            catch (InvalidCastException)
+            {
+                MessageBox.Show("Невозможно удалить пустую строку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
