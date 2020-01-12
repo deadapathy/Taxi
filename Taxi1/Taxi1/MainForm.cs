@@ -314,6 +314,32 @@ namespace Taxi1
         {
 
         }
+
+      
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Close();
+        }
+
+       
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+          
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void статистикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 
 

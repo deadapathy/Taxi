@@ -43,7 +43,7 @@ namespace Taxi1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -79,16 +79,16 @@ namespace Taxi1
         {
             if (checkBox1.Checked)
             {
-                textBox2.UseSystemPasswordChar = true;
+                textBox2.UseSystemPasswordChar = false;
                 var checkBox = (CheckBox)sender;
-                checkBox.Text = "Показать";
+                checkBox.Text = "Скрыть";
 
             }
             else
             {
-                textBox2.UseSystemPasswordChar = false;
+                textBox2.UseSystemPasswordChar = true;
                 var checkBox = (CheckBox)sender;
-                checkBox.Text = "Скрыть";
+                checkBox.Text = "Показать";
             }
         }
     }

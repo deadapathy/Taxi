@@ -114,5 +114,10 @@ namespace Taxi1
         {
             Close();
         }
+
+        private void labelCopyright_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
