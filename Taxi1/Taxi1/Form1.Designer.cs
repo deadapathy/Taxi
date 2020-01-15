@@ -37,19 +37,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.таксопаркDataSet = new Taxi1.ТаксопаркDataSet();
-            this.пользователиTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ПользователиTableAdapter();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).BeginInit();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.таксопаркDataSet = new Taxi1.ТаксопаркDataSet();
+            this.пользователиTableAdapter = new Taxi1.ТаксопаркDataSetTableAdapters.ПользователиTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -121,20 +121,6 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Новый пользователь?";
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "Пользователи";
-            this.bindingSource1.DataSource = this.таксопаркDataSet;
-            // 
-            // таксопаркDataSet
-            // 
-            this.таксопаркDataSet.DataSetName = "ТаксопаркDataSet";
-            this.таксопаркDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // пользователиTableAdapter
-            // 
-            this.пользователиTableAdapter.ClearBeforeFill = true;
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -191,6 +177,20 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Пароль";
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Пользователи";
+            this.bindingSource1.DataSource = this.таксопаркDataSet;
+            // 
+            // таксопаркDataSet
+            // 
+            this.таксопаркDataSet.DataSetName = "ТаксопаркDataSet";
+            this.таксопаркDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // пользователиTableAdapter
+            // 
+            this.пользователиTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,10 +215,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "s";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.таксопаркDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

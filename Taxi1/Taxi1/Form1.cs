@@ -17,11 +17,12 @@ namespace Taxi1
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Mex\Desktop\Таксопарк\Taxi1\Taxi1\bin\Debug\Таксопарк.accdb");
+                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Таксопарк.accdb");
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter("SELECT COUNT(*) FROM Пользователи where Логин = '" + textBox1.Text + "' and Пароль = '" + textBox2.Text + "'", con);
             DataTable dt = new DataTable();
 
@@ -43,7 +44,7 @@ namespace Taxi1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,7 +74,7 @@ namespace Taxi1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            this.пользователиTableAdapter.Fill(this.таксопаркDataSet.Пользователи);
 
         }
 
